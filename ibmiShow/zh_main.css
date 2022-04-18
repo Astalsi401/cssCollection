@@ -1,0 +1,935 @@
+@charset "UTF-8";
+.myContent {
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+  color: black;
+  font-family: arial, helvetica, sans-serif;
+  padding: 30px 0;
+  min-width: 350px;
+}
+
+.myBg {
+  background: #d1ebf7;
+}
+
+.myBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2% 2%;
+}
+
+#myBanner,
+#myB2Banner {
+  background-color: #2e3076;
+  color: white;
+  background-size: cover;
+}
+
+#myBanner {
+  position: relative;
+  background-color: #2e3076;
+  padding: 0;
+}
+#myBanner #handBookDl {
+  transition: 0.4s;
+  position: absolute;
+  display: inline-block;
+  bottom: 5px;
+  right: 20%;
+  width: 170px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+  background: #f29a05;
+}
+#myBanner #handBookDl a {
+  transition: 0.4s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  font-weight: bold;
+  color: white;
+}
+#myBanner #handBookDl:hover {
+  opacity: 1;
+  background: #ffd60a;
+}
+#myBanner #handBookDl:hover a {
+  color: #2e3076;
+}
+
+#myB2Banner {
+  background-image: url("finalpic/B2B_參展辦法web.jpg");
+  background-color: #2e3076;
+}
+#myB2Banner div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 300px;
+}
+#myB2Banner div img {
+  display: block;
+  width: 80%;
+}
+#myB2Banner span {
+  font-weight: 600;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+#myW40 {
+  width: 36%;
+}
+
+#myW60 {
+  position: relative;
+  width: 64%;
+}
+
+.myTags {
+  position: relative;
+  justify-content: space-around;
+  padding: 0;
+}
+.myTags div {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  width: calc(20% - 2px);
+  min-width: 170px;
+  height: 74px;
+  margin: 0px;
+  flex-wrap: wrap;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.5);
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+}
+.myTags div p {
+  color: black;
+  position: relative;
+  display: inline;
+  transition: 0.4s;
+}
+.myTags div:hover p {
+  color: #2e3076;
+}
+.myTags div.active {
+  background: #d1ebf7;
+  border-color: #2e3076 #2e3076 rgba(0, 0, 0, 0) #2e3076;
+  box-shadow: rgba(0, 0, 0, 0.5) -3px -3px 3px;
+  left: 15px;
+}
+.myTags div.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 1px);
+  background: #d1ebf7;
+}
+.myTags div.active p {
+  color: #f29a05;
+  transition: 0.4s;
+}
+.myTags div.active .mySquare {
+  transition: 0.4s;
+  border-color: #f29a05 #f29a05 #f29a05 #f29a05;
+}
+.myTags#myTagsWeb div {
+  border-left: rgba(0, 0, 0, 0);
+}
+.myTags#myTagsWeb div.active {
+  position: relative;
+  transform: skewX(-20deg);
+  left: -15px;
+}
+.myTags#myTagsWeb div.active::before {
+  left: 15px;
+  border-left: rgba(0, 0, 0, 0);
+  border-right: #2e3076;
+  transform: skewX(20deg);
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid #2e3076;
+}
+.myTags#myTagsWeb div.active p {
+  transform: skewX(20deg);
+}
+.myTags#myTagsWeb div:first-child {
+  border-left: 1px solid #2e3076;
+}
+.myTags#myTagsWeb div:first-child.active {
+  transform: skewX(20deg);
+  left: 15px;
+}
+.myTags#myTagsWeb div:first-child.active.active::before {
+  left: -15px;
+  transform: skewX(-20deg);
+  box-shadow: rgba(0, 0, 0, 0.5) -3px -3px 3px;
+  border-left: 1px solid #2e3076;
+  border-right: 1px solid rgba(0, 0, 0, 0);
+}
+.myTags#myTagsWeb div:first-child.active p {
+  transform: skewX(-20deg);
+}
+.myTags#myTagsPhone1 div:first-child.active, .myTags#myTagsPhone2 div:first-child.active, .myTags#myTagsPhone3 div:first-child.active {
+  border-left: #2e3076;
+  transform: skewX(20deg);
+}
+.myTags#myTagsPhone1 div:first-child.active::before, .myTags#myTagsPhone2 div:first-child.active::before, .myTags#myTagsPhone3 div:first-child.active::before {
+  left: -16px;
+  transform: skewX(-20deg);
+  box-shadow: rgba(0, 0, 0, 0.5) -3px -3px 3px;
+  border-left: 1px solid #2e3076;
+  border-right: 1px solid rgba(0, 0, 0, 0);
+}
+.myTags#myTagsPhone1 div:first-child.active p, .myTags#myTagsPhone2 div:first-child.active p, .myTags#myTagsPhone3 div:first-child.active p {
+  transform: skewX(-20deg);
+}
+.myTags#myTagsPhone1 div:last-child, .myTags#myTagsPhone2 div:last-child, .myTags#myTagsPhone3 div:last-child {
+  border-left: rgba(0, 0, 0, 0);
+}
+.myTags#myTagsPhone1 div:last-child.active, .myTags#myTagsPhone2 div:last-child.active, .myTags#myTagsPhone3 div:last-child.active {
+  position: relative;
+  transform: skewX(-20deg);
+  left: -16px;
+}
+.myTags#myTagsPhone1 div:last-child.active::before, .myTags#myTagsPhone2 div:last-child.active::before, .myTags#myTagsPhone3 div:last-child.active::before {
+  left: 15px;
+  border-left: rgba(0, 0, 0, 0);
+  border-right: #2e3076;
+  transform: skewX(20deg);
+  border-left: 1px solid rgba(0, 0, 0, 0);
+  border-right: 1px solid #2e3076;
+}
+.myTags#myTagsPhone1 div:last-child.active p, .myTags#myTagsPhone2 div:last-child.active p, .myTags#myTagsPhone3 div:last-child.active p {
+  transform: skewX(20deg);
+}
+
+.myLayers {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #2e3076;
+  border-top: 0;
+  border-radius: 0 0 100px 0;
+  padding-bottom: 50px;
+  box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.5);
+}
+.myLayers .myLayer {
+  transition: 0.4s;
+  position: absolute;
+  left: -150%;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+.myLayers .myLayer.active {
+  transition: 0.4s;
+  position: relative;
+  left: 0%;
+  height: auto;
+  width: 100%;
+  overflow: auto;
+}
+.myLayers .myLayer ol {
+  list-style-type: decimal;
+}
+
+#myLayer1 .myth3 {
+  text-align: center !important;
+}
+
+#myLayer4 .myWeb .myth2 {
+  width: 200px;
+}
+
+#myLayer5 .my2div {
+  padding: 5px 10px;
+  min-height: 50px;
+}
+#myLayer5 li {
+  list-style-type: disc;
+}
+
+#myContact {
+  background: #d1ebf7;
+}
+#myContact .myLine {
+  position: absolute;
+  background: black;
+  width: 1px;
+  height: 120px;
+  left: 48%;
+}
+#myContact .myBox {
+  padding: 10px 0;
+}
+#myContact .my1div {
+  padding: 0 10px;
+}
+#myContact .my2div {
+  padding-top: 10px;
+}
+#myContact .my2div_2 {
+  padding: 5px 10px;
+}
+#myContact .my2div_2 a,
+#myContact .my1div a {
+  font-size: calc(10pt + 0.5vmin);
+  line-height: calc(10pt + 0.5vmin + 5pt);
+}
+#myContact span {
+  color: #2e3076;
+  font-weight: bold;
+}
+
+.myPhone {
+  display: none;
+}
+
+.myBlue {
+  color: #2e3076;
+  font-weight: bolder;
+}
+
+.myGray {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.myTitle,
+.myh1,
+.myh1_1,
+.myh2,
+.myh2_1,
+.myh2_2,
+.myh2_3 {
+  font-weight: bolder;
+}
+
+.myTitle {
+  font-size: calc(35px + 1vmin);
+  line-height: calc(35px + 1vmin + 5pt);
+  color: #ffd60a;
+}
+
+.myh1,
+.myh1_1 {
+  font-size: calc(14.5pt + 1vmin);
+  line-height: calc(14.5pt + 1vmin + 5pt);
+}
+
+.myh2,
+.myh2_1,
+.myh2_2,
+.myh2_3 {
+  font-size: calc(11.5pt + 1vmin);
+  line-height: calc(11.5pt + 1vmin + 5pt);
+}
+
+.myh1 {
+  color: #2e3076;
+  margin-right: 10px;
+}
+
+.myh1_1 {
+  color: white;
+}
+
+.myh2 {
+  color: #2e3076;
+}
+
+.myh2_1,
+.myh2_2 {
+  color: #f29a05;
+}
+
+.myh2_3 {
+  color: #ef5a24;
+}
+
+.myTable {
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #2e3076;
+  border-radius: 25px 25px 0 0;
+  background: white;
+}
+.myTable .myRound {
+  border-radius: 25px 25px 0 0;
+}
+.myTable tr:nth-of-type(even) {
+  background: #d1ebf7;
+}
+.myTable tr:nth-of-type(odd) {
+  background-color: rgba(0, 112, 186, 0.5);
+}
+.myTable th,
+.myTable td {
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+  padding: 5px 8px;
+}
+.myTable th {
+  text-align: center;
+  background: #2e3076;
+  color: white;
+}
+.myTable td {
+  text-align: left;
+  color: black;
+  border: 1px solid #2e3076;
+}
+.myTable td li {
+  list-style-type: disc;
+}
+
+.myth1,
+.myth2,
+.myth3,
+.myth3_1,
+.myth4,
+.myth5 {
+  background: #2e3076;
+  color: white;
+}
+
+.myth1,
+.myth2 {
+  border-radius: 20px 0 0 0;
+}
+
+.myth1 {
+  min-width: 130px;
+}
+
+.myth3,
+.myth3_1 {
+  min-width: 80px;
+}
+
+.myth4 {
+  border-radius: 0 20px 0 0;
+}
+
+.myth5 {
+  border-radius: 20px 20px 0 0;
+}
+
+.myNotes {
+  font-size: calc(10pt + 0.5vmin);
+  line-height: calc(10pt + 0.5vmin + 5pt);
+}
+
+.myHighlight {
+  color: #f29a05;
+  font-weight: bolder;
+}
+
+.myButton {
+  transition: 0.4s;
+  position: relative;
+  display: block;
+  min-width: 200px;
+  width: 30%;
+  height: 30px;
+}
+.myButton a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.myButton_2 {
+  background: #0071ba;
+  box-shadow: 3px 3px 3px #2e3076;
+  border-radius: 50px;
+  margin: 30px auto;
+  height: 50px;
+}
+.myButton_2 a {
+  color: white;
+  font-size: calc(11.5pt + 1vmin);
+  line-height: calc(11.5pt + 1vmin + 5pt);
+  line-height: 50px;
+}
+.myButton_2 a:hover {
+  color: rgba(0, 112, 186, 0.5);
+}
+.myButton_2:hover {
+  background: #2e3076;
+  box-shadow: 3px 3px 3px #0071ba;
+}
+.myButton_2:hover a {
+  color: white;
+}
+
+.my2div_3.myButton.myButton_2 {
+  width: calc(50% - 4px);
+  min-width: 100px;
+}
+
+.myContent,
+.myTable,
+.myBox,
+.my2div,
+.my2div_2,
+.my2div_3,
+.my3div,
+.my4div {
+  box-sizing: border-box;
+}
+
+.myContent,
+.myBox,
+.myBox img,
+.my1div {
+  width: 100%;
+}
+
+.myCenter {
+  justify-content: center;
+}
+
+.myLeft {
+  justify-content: left;
+}
+
+.myRight {
+  justify-content: flex-end;
+}
+
+.myVertical {
+  writing-mode: vertical-rl;
+}
+
+.myBetween {
+  justify-content: space-between;
+}
+
+#myEvents {
+  padding: 0;
+}
+#myEvents div {
+  padding: 2.5px 0;
+}
+#myEvents h1 {
+  padding: 0 2%;
+}
+#myEvents .my1div {
+  margin: 2px 0;
+}
+
+#showList span {
+  transition: 0.4s;
+  cursor: pointer;
+  border-bottom: rgba(0, 0, 0, 0) 2px solid;
+}
+#showList div {
+  position: relative;
+  transition: 0.4s;
+  display: block;
+  margin: 20px 15px;
+  font-weight: bolder;
+}
+#showList div.active span {
+  border-bottom: #2e3076 2px solid;
+  color: #2e3076;
+}
+#showList div.active .myTriangle {
+  transition: 0.4s;
+  border-color: #2e3076 transparent transparent transparent;
+}
+#showList div:hover {
+  color: #2e3076;
+}
+
+.allShows {
+  position: relative;
+  overflow-y: hidden;
+}
+
+#showContent {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  height: 400px;
+  left: 0;
+  transition: 0.8s;
+}
+#showContent div {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0px;
+  height: 380px;
+  transform-style: preserve-3d;
+}
+#showContent div .showText {
+  position: absolute;
+  align-self: center;
+  display: block;
+  right: 10px;
+  padding: 10px 20px;
+  width: 40%;
+  background: #ffd60a;
+  color: black;
+  margin: auto 0;
+  font-size: calc(10pt + 0.5vmin);
+  line-height: calc(10pt + 0.5vmin + 5pt);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+#showContent div .showText .myh2 {
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+}
+#showContent div::before {
+  content: "";
+  position: absolute;
+  transform: translateZ(-1px);
+  display: block;
+  background: #0071ba;
+  width: 50%;
+  height: 400px;
+  top: 0;
+  right: calc(20% - 50px);
+}
+#showContent img {
+  display: block;
+  width: 80%;
+}
+
+#mySwitch {
+  position: relative;
+  width: 130px;
+  z-index: 2;
+  margin: 0 auto;
+}
+#mySwitch span {
+  cursor: pointer;
+  float: left;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-right: 5px;
+  background: #f29a05;
+  transition: 0.4s;
+}
+#mySwitch .on {
+  background: #2e3076;
+}
+
+.myTriangle {
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  border-color: rgba(0, 0, 0, 0) transparent transparent transparent;
+  border-style: solid;
+  border-width: 6px 4px 0px 4px;
+  transform: rotate(270deg);
+  border-bottom: 0;
+}
+
+.mySquare {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid rgba(0, 0, 0, 0);
+  transform: rotate(45deg);
+}
+
+.myArrow {
+  display: none;
+  cursor: pointer;
+  line-height: 40px;
+  text-align: center;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  top: 180px;
+  color: #fff;
+  background: #474550;
+}
+.myArrow:hover {
+  background-color: #E98352;
+}
+
+.myArrowR,
+.myArrowL {
+  transition: 0.4s;
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background: #f29a05;
+  top: -6px;
+}
+.myArrowR::before, .myArrowR::after,
+.myArrowL::before,
+.myArrowL::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background: #f29a05;
+}
+.myArrowR::before,
+.myArrowL::before {
+  top: -3px;
+}
+.myArrowR::after,
+.myArrowL::after {
+  top: 3px;
+}
+
+.myArrowL {
+  left: -15px;
+}
+.myArrowL::before, .myArrowL::after {
+  left: 0;
+}
+.myArrowL::before {
+  transform: rotate(315deg);
+}
+.myArrowL::after {
+  transform: rotate(45deg);
+}
+
+.myArrowR {
+  right: -15px;
+}
+.myArrowR::before, .myArrowR::after {
+  right: 0;
+}
+.myArrowR::before {
+  transform: rotate(45deg);
+}
+.myArrowR::after {
+  transform: rotate(315deg);
+}
+
+.myButton_3 a {
+  font-size: calc(11.5pt + 0.5vmin);
+  line-height: calc(11.5pt + 0.5vmin + 5pt);
+  font-weight: 600;
+  text-decoration: none;
+  color: #f29a05;
+}
+.myButton_3:hover .myArrowL,
+.myButton_3:hover .myArrowR {
+  width: 15px;
+}
+.myButton_3:hover .myArrowL {
+  left: -15px;
+}
+.myButton_3:hover .myArrowR {
+  right: -15px;
+}
+
+.my2div,
+.my2div_2,
+.my2div_3 {
+  width: 50%;
+  min-width: 130px;
+}
+
+.my3div {
+  width: 32.6666666667%;
+  padding: 0 2px;
+}
+
+.my4div {
+  width: 24.5%;
+}
+
+.myBlock {
+  background: linear-gradient(white 0 0) padding-box, linear-gradient(45deg, #4274f9, #54c4d1) border-box;
+  border: 4px solid transparent;
+  border-radius: 0 15px 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) -7px 7px 0px 0;
+}
+
+@media screen and (max-width: 1079px) {
+  .myTitle {
+    font-size: calc(28px + 1vmin);
+    line-height: calc(28px + 1vmin + 5pt);
+  }
+
+  #myW60,
+#myW40 {
+    width: 100%;
+  }
+
+  #myBannerTime {
+    position: relative;
+    display: block;
+    margin-bottom: 2%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+
+  #myContact .myLine {
+    width: 80%;
+    height: 1px;
+    left: 10%;
+  }
+
+  #myTagsWeb.myWeb,
+#myTagsPhone1.myWeb,
+#myTagsPhone2.myWeb,
+#myTagsPhone3.myWeb {
+    display: none;
+  }
+  #myTagsWeb.myPhone,
+#myTagsPhone1.myPhone,
+#myTagsPhone2.myPhone,
+#myTagsPhone3.myPhone {
+    display: flex;
+  }
+  #myTagsWeb.myPhone div,
+#myTagsPhone1.myPhone div,
+#myTagsPhone2.myPhone div,
+#myTagsPhone3.myPhone div {
+    width: calc(50% - 2px);
+  }
+
+  #myLayersWeb,
+#myLayersPhone1,
+#myLayersPhone2,
+#myLayersPhone3 {
+    margin-bottom: 20px;
+  }
+  #myLayersWeb.myWeb,
+#myLayersPhone1.myWeb,
+#myLayersPhone2.myWeb,
+#myLayersPhone3.myWeb {
+    display: none;
+  }
+  #myLayersWeb.myPhone,
+#myLayersPhone1.myPhone,
+#myLayersPhone2.myPhone,
+#myLayersPhone3.myPhone {
+    display: flex;
+  }
+}
+@media screen and (max-width: 760px) {
+  .my2div {
+    width: 100%;
+  }
+
+  .my4div {
+    width: 49%;
+  }
+
+  #showContent div .showText {
+    position: relative;
+    display: block;
+    transition: 0.4s;
+    overflow-y: hidden;
+    width: 100%;
+    top: -50px;
+    right: 0;
+  }
+  #showContent div::before {
+    right: 0;
+    height: 70%;
+  }
+  #showContent div img {
+    width: 95%;
+  }
+
+  #myBanner .myWeb {
+    display: none;
+  }
+  #myBanner .myPhone {
+    display: table;
+  }
+
+  #myB2Banner {
+    background-image: url("finalpic/B2B參展辦法_phone.jpg");
+  }
+}
+@media screen and (max-width: 500px) {
+  .myTitle {
+    font-size: calc(14.5pt + 1vmin);
+    line-height: calc(14.5pt + 1vmin + 5pt);
+  }
+
+  .myButton_3 a {
+    font-size: calc(11.5pt + 0.5vmin);
+    line-height: calc(11.5pt + 0.5vmin + 5pt);
+  }
+
+  .myth2 {
+    width: 40px;
+  }
+
+  .myWeb {
+    display: none;
+  }
+
+  .myPhone {
+    display: table;
+  }
+
+  .my2div_2,
+.my3div,
+.my4div {
+    width: 100%;
+  }
+
+  .my2div_2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .my2div_3 {
+    min-width: 50px;
+  }
+
+  #showContent div .showText {
+    top: 0;
+  }
+
+  #myContact .my2div {
+    margin-top: 20px;
+  }
+
+  #myBanner #handBookDl {
+    height: 30px;
+  }
+  #myBanner #handBookDl a {
+    line-height: 30px;
+  }
+}
+
+/*# sourceMappingURL=zh_main.css.map */
